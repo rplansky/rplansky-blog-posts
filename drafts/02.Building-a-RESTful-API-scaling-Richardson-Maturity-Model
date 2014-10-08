@@ -1,0 +1,36 @@
+## Introdução
+
+Em um primeiro artigo, quando falei do [modelo de arquitetura REST](http://www.rplansky.com/definicao-restricoes-e-beneficios-do-modelo-de-arquitetura-rest), dei uma rápida pincelada
+em alguns tópicos relativamente "avançados", que é o *Richardson Maturity Model*
+(RMM) e *HATEOAS* - não que sejam assuntos complexos ou muito trabalhosos, mas é
+que são assuntos desconhecidos, ou simplesmente ignorados, por muitos
+desenvolvedores na hora de construir uma API. Por isso, este artigo tem como
+principal objetivo abordar a questão de Uniform Interface do modelo REST.
+
+Vou me apronfundar mais neste tema, detalhando os níveis de maturidade de uma
+API e, posteriormente, mostrando na prática uma aplicação construída passando
+por todos esses níveis: desde a ausência dele até o terceiro nível que é a
+implementação de *hypermedia* nas representações dos seus *resources*.
+
+## As ferramentas
+
+Para a construção dos exemplos vou utilizar PHP 5.4+. Tendo em vista que a
+nossa aplicação não terá muita complexidade, vou usar um micro framework para
+cuidar do básico: o [Silex](http://silex.sensiolabs.org/), baseado nos
+componentes do Symfony2. E de banco de dados, usarei o
+[Mongolid](https://github.com/leroy-merlin-br/mongolid) para cuidar da
+comunicação com o MongoDB.
+
+Criei um repositório no GitHub para quem quiser baixar os exemplos funcionais da
+API nos diferentes níveis: [https://github.com/rplansky/restful-api-in-practice-blog-sample]
+(https://github.com/rplansky/restful-api-in-practice-blog-sample). Tem um branch
+para cada nível do RMM, é só trocar entre eles para ver a API se comportar de
+acordo com o nível. Tem um README.md explicando o funcionamento de cada nível
+para deixar mais claro.
+
+## Richardson Maturity Model
+
+
+
+## Referências
+[martinfowler.com - Richardson Maturity Model](http://martinfowler.com/articles/richardsonMaturityModel.html)
