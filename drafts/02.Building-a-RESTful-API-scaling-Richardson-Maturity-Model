@@ -4,15 +4,32 @@ Em um primeiro artigo, quando falei do [modelo de arquitetura REST](http://www.r
 em alguns tópicos relativamente "avançados", que é o *Richardson Maturity Model*
 (RMM) e *HATEOAS* - não que sejam assuntos complexos ou muito trabalhosos, mas é
 que são assuntos desconhecidos, ou simplesmente ignorados, por muitos
-desenvolvedores na hora de construir uma API. Por isso, este artigo tem como
-principal objetivo abordar a questão de Uniform Interface do modelo REST.
+desenvolvedores na hora de construir uma API. Por isso, este é o primeiro artigo
+de uma série que tem como principal objetivo abordar a questão de Uniform
+Interface do modelo REST.
 
 Vou me apronfundar mais neste tema, detalhando os níveis de maturidade de uma
 API e, posteriormente, mostrando na prática uma aplicação construída passando
 por todos esses níveis: desde a ausência dele até o terceiro nível que é a
 implementação de *hypermedia* nas representações dos seus *resources*.
 
-## As ferramentas
+## O Projeto
+
+A ideia é construir uma simples API para cadastrar e gerenciar tarefas do
+dia-a-dia.
+
+### Requisitos
+
+- #R01 - A aplicação deve ser capaz de inserir novas tarefas contendo os campos:
+id, nome e descrição.
+- #R02 - A aplicação deve ser capaz de atualizar tarefas existentes.
+- #R03 - A aplicação deve ser capaz de excluir uma determinada tarefa pelo *id*.
+- #R04 - A aplicação deve ser capaz de buscar uma determinada tarefa pelo campo
+*id*.
+- #R05 - A aplicação deve ser capaz de gerenciar anotações (CRUD) de uma
+determinada tarefa existente.
+
+### As Ferramentas
 
 Para a construção dos exemplos vou utilizar PHP 5.4+. Tendo em vista que a
 nossa aplicação não terá muita complexidade, vou usar um micro framework para
@@ -28,7 +45,12 @@ para cada nível do RMM, é só trocar entre eles para ver a API se comportar de
 acordo com o nível. Tem um README.md explicando o funcionamento de cada nível
 para deixar mais claro.
 
-## Richardson Maturity Model
+Mas fiquem à vontade para pegar a base e os conceitos aqui e construir a sua
+própria API com suas próprias ferramentas. Seria lindo isso =)
+
+## Um pouco mais de conceito
+
+### Richardson Maturity Model
 
 
 
